@@ -21,7 +21,7 @@ def get_birthdays_per_week(path, encoding):
             # print(birthday_current_year)
             diff = birthday_current_year - date.today() # Визначення кількості днів до дня народження працівника
             # print(diff.days)
-            if -2 - now.weekday() <= diff.days < 5 - now.weekday(): # Якщо до дня народження працівника менше тижня, то заносимо його в новий словничок birthday_users
+            if 5 - now.weekday() <= diff.days < 12 - now.weekday(): # Якщо до дня народження працівника менше тижня, то заносимо його в новий словничок birthday_users
                 birthday_users[name] = birthday_current_year.strftime('%A')
             this_week = defaultdict(list)
             for name, day in birthday_users.items():
